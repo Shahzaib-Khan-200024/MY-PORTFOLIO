@@ -4,54 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator Project</title>
+    <title>Project Login Form</title>
     <style>
         body {
-            background-color: black; /* Full black background */
+            background-color: black;
             font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Changed from height to min-height for better responsiveness */
             margin: 0;
             text-align: center;
-            color: #ffffff; /* White text for better contrast */
+            color: #ffffff;
+            padding: 20px; /* Added padding for mobile view */
+            box-sizing: border-box;
         }
 
         .container {
             display: flex;
-            flex-direction: column; /* Stack text above images */
-            align-items: center; /* Center text */
-            max-width: 900px; /* Limit container width */
+            flex-direction: column;
+            align-items: center;
+            max-width: 900px;
+            width: 100%; /* Ensure container takes full width on mobile */
         }
 
         .project-img {
-            width: 100%; /* Image will take full width of container */
-            max-width: 500px; /* Increased max width to 500px */
+            width: 100%;
+            max-width: 500px;
             border-radius: 10px;
-            margin: 10px; /* Margin between images */
+            margin: 10px 0; /* Adjusted margin for better spacing */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
         }
 
         .description {
-            margin-bottom: 20px; /* Space below the description */
+            margin-bottom: 20px;
+            padding: 0 10px; /* Added padding for better text spacing on mobile */
         }
 
         .description h1 {
-            font-size: 2.5rem;
+            font-size: 3rem; /* Reduced font-size for smaller screens */
             text-align: center;
+            margin-bottom: 10px;
         }
 
         .description p {
-            font-size: 1.5rem;
+            font-size: 1.5rem; /* Adjusted font-size for better readability */
             line-height: 1.6;
-            max-width: 900px; /* Limit text width for better readability */
-            margin: 0 20px;
+            max-width: 900px;
+            margin: 0;
         }
 
         .images {
-            display: flex; /* Create a flex container for images */
-            justify-content: center; /* Center images */
-            gap: 20px; /* Space between images */
+            display: flex;
+            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+            justify-content: center;
+            gap: 10px; /* Adjusted gap for better spacing */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .description h1 {
+                font-size: 1.8rem; /* Slightly smaller heading on tablets */
+            }
+
+            .description p {
+                font-size: 1rem; /* Smaller font-size for tablets */
+            }
+
+            .project-img {
+                max-width: 400px; /* Adjust image size for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px; /* Increased padding for mobile view */
+            }
+
+            .description h1 {
+                font-size: 1.5rem; /* Smaller heading for mobile */
+            }
+
+            .description p {
+                font-size: 0.95rem; /* Adjusted font-size for mobile */
+            }
+
+            .images {
+                flex-direction: column; /* Stack images vertically on mobile */
+            }
+
+            .project-img {
+                max-width: 100%; /* Images take full width on mobile */
+            }
         }
     </style>
 </head>
@@ -63,8 +107,8 @@
             <p>This project features an aesthetically pleasing login form that includes an engaging animation when users click the "Sign Up" button. If users wish to return to the login form from the sign-up page, they can simply click on the "Login" text, which triggers the same captivating animation. While this is a straightforward project, the standout aspect is undoubtedly its animation, which enhances the overall user experience.</p>
         </div>
         <div class="images">
-            <img src="images/loginform1.png" alt="Login Form img" class="project-img">
-            <img src="images/loginform2.png" alt="Login Form img" class="project-img">
+            <img src="images/loginform1.png" alt="Login Form Image 1" class="project-img">
+            <img src="images/loginform2.png" alt="Login Form Image 2" class="project-img">
         </div>
     </div>
 </body>

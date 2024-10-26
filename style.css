@@ -128,65 +128,153 @@ nav ul li a:hover::after{
     color: #fff;
 }
 /* --------------projects-------------- */
-#projects{
-    padding: 30px 0;
+/* General Styles for the Project Section */
+#projects {
+    color: #fff;
+    padding: 60px 0;
 }
-#projects .sub-title{
+
+#projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#projects .sub-title {
     margin-bottom: 60px;
     text-align: center;
 }
-.projects-list{
+
+/* Styles for Project List */
+.projects-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-.projects-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 18px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-}
-.projects-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-.projects-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-.projects-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
-    margin-top: 20px;
-    margin-left: 10px;
-    display: inline-block;
-    transition: background 0.5s, transform 0.5s;
-}
-.projects-list div:hover{
-    background: #ff004f;
-    transform: translateY(-10px);
-}
-.projects-list div a:hover{
-    color: blue;
-    transform: scale(1.05);;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-/* Responsive Design for 100% to 125% screen size */
-@media (min-width: 1000px) and (max-width: 1250px) {
-    .projects-list{
-        grid-template-columns: repeat(2, 1fr); /* Two columns */
-        grid-gap: 30px; /* Adjust gap as needed */
+/* Individual Project Cards */
+.projects-list div {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background 0.5s, transform 0.5s;
+}
+
+/* Icon Styling */
+.projects-list div i {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Project Title */
+.projects-list div h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Project Description */
+.projects-list div p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Buttons for Details and Code */
+.projects-list div a {
+    color: #4CAF50; /* Button Text Color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-right: 10px;
+    transition: color 0.3s;
+}
+
+.projects-list div a:hover {
+    color: #76ff03;
+}
+
+/* Hover Effect for Project Cards */
+.projects-list div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+    background: #ff004f;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust Sub-Title Font Size for Smaller Screens */
+    #projects .sub-title {
+        font-size: 2rem;
+    }
+
+    /* Adjust Project Card Padding and Font Sizes for Mobile */
+    .projects-list div {
+        padding: 15px;
+    }
+
+    .projects-list div i {
+        font-size: 2rem;
+    }
+
+    .projects-list div h2 {
+        font-size: 1.3rem;
+    }
+
+    .projects-list div p {
+        font-size: 0.9rem;
+    }
+
+    .projects-list div a {
+        font-size: 0.85rem;
+    }
+}
+
+/* Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+    /* Make Grid Layout a Single Column for Mobile Phones */
+    .projects-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Further Adjustments for Very Small Screens */
+    #projects .sub-title {
+        font-size: 1.8rem;
+    }
+
+    .projects-list div {
+        padding: 10px;
+    }
+
+    .projects-list div i {
+        font-size: 1.8rem;
+    }
+
+    .projects-list div h2 {
+        font-size: 1.2rem;
+    }
+
+    .projects-list div p {
+        font-size: 0.85rem;
+    }
+
+    .projects-list div a {
+        font-size: 0.8rem;
     }
 }
 /* --------------skills-------------- */
 
 /* General Container Styles */
 #skills {
+    background-color: #1a1818;
     padding: 60px 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -285,7 +373,9 @@ nav ul li a:hover::after{
 
 
 /* --------------contact-------------- */
-
+#contact .sub-title{
+    margin-top: 60px;
+}
 
 .contact-left {
     flex-basis: 35%;
