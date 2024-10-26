@@ -18,6 +18,15 @@ body{
     background-size: cover;
     background-position: center;
 }
+/* Parallax Effect for the Header */
+#header {
+    background-image: url('images/background.png'); /* Replace with your actual image */
+    height: 100vh;
+    background-attachment: fixed; /* This creates the parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .container{
     padding: 10px 10%;
 }
@@ -118,7 +127,6 @@ nav ul li a:hover::after{
     font-weight: 600;
     color: #fff;
 }
-
 /* --------------projects-------------- */
 #projects{
     padding: 30px 0;
@@ -129,7 +137,7 @@ nav ul li a:hover::after{
 }
 .projects-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -166,6 +174,14 @@ nav ul li a:hover::after{
 .projects-list div a:hover{
     color: blue;
     transform: scale(1.05);;
+}
+
+/* Responsive Design for 100% to 125% screen size */
+@media (min-width: 1000px) and (max-width: 1250px) {
+    .projects-list{
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        grid-gap: 30px; /* Adjust gap as needed */
+    }
 }
 /* --------------skills-------------- */
 
@@ -440,12 +456,4 @@ nav .fas{
     margin-top: -40px;
     display: block;
 }
-/* Parallax Effect for the Header */
-#header {
-    background-image: url('images/background.png'); /* Replace with your actual image */
-    height: 100vh;
-    background-attachment: fixed; /* This creates the parallax effect */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
