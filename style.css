@@ -240,11 +240,6 @@ nav ul li a:hover::after{
         gap: 15px;
     }
 
-    /* Further Adjustments for Very Small Screens */
-    #projects .sub-title {
-        font-size: 1.8rem;
-    }
-
     .projects-list div {
         padding: 10px;
     }
