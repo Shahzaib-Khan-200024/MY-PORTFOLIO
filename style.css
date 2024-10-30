@@ -43,17 +43,17 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 20px 0;
 }
 
 .logo {
     font-family: 'Arial', sans-serif;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     color: #fff;
-    /* White for the rest of the logo */
     transition: 0.5s ease;
     cursor: pointer;
-    margin-top: 15px;
+    margin-left: 10px;
 }
 
 .logo .highlight {
@@ -65,10 +65,19 @@ nav {
     transform: scale(1.1);
 }
 
+nav ul {
+    display: flex;
+    align-items: center;
+    background-color: rgba(32, 32, 32, 0.9);
+    padding: 15px 35px;
+    border-radius: 30px;
+    margin-right: 40px;
+}
+
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 0 25px;
 }
 
 nav ul li a {
@@ -76,21 +85,17 @@ nav ul li a {
     text-decoration: none;
     font-size: 20px;
     position: relative;
+    transition: color 0.3s ease;
 }
 
 nav ul li a::after {
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+    display: none;
 }
 
-nav ul li a:hover::after {
-    width: 100%;
+nav ul li a:hover {
+    color: #ff004f;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 0, 79, 0.5);
 }
 
 .header-text {
@@ -572,4 +577,50 @@ nav .fas {
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    nav {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -200px;
+        flex-direction: column;
+        background-color: #262626;
+        height: 100vh;
+        width: 200px;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.3s ease;
+        border-radius: 0;
+        margin-right: 0;
+    }
+
+    nav ul li {
+        margin: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* Hamburger menu icon */
+    nav .fas {
+        display: block;
+        font-size: 25px;
+        margin-right: 10px;
+    }
+
+    nav ul.active {
+        right: 0;
+    }
 }
