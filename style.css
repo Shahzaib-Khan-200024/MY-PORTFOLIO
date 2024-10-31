@@ -26,7 +26,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     #header {
-        background-image: url('images/mobile-background.png');
+        background-image: url('images/phone-background.png');
         background-attachment: fixed;
         background-position: center;
     }
@@ -493,6 +493,8 @@ nav .fas {
 @media only screen and (max-width: 600px) {
     #header {
         background-image: url(images/phone-background.png);
+        background-attachment: fixed;
+        background-position: center;
     }
 
     .header-text {
