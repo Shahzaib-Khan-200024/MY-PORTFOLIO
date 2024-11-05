@@ -7,94 +7,98 @@
     <title>Calculator Project</title>
     <style>
         body {
-            background-color: black;
-            font-family: 'Arial', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* Changed from height to min-height for better responsiveness */
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            min-height: 100vh;
             margin: 0;
-            text-align: center;
-            color: #ffffff;
-            padding: 20px; /* Added padding for mobile view */
-            box-sizing: border-box;
+            color: #f5f5f5;
+            padding: 40px 20px;
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 900px;
-            width: 100%; /* Ensure container takes full width on mobile */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .description {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .description h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: linear-gradient(45deg, #FF9800, #FFC107);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .description p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #cecece;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
         }
 
         .project-img {
             width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            margin: 10px 0; /* Adjusted margin for better spacing */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .description {
-            margin-bottom: 20px;
-            padding: 0 10px; /* Added padding for better text spacing on mobile */
+        .project-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .description h1 {
-            font-size: 3rem; /* Reduced font-size for smaller screens */
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .description p {
-            font-size: 1.5rem; /* Adjusted font-size for better readability */
-            line-height: 1.6;
-            max-width: 900px;
-            margin: 0;
-        }
-
-        .images {
-            display: flex;
-            flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-            justify-content: center;
-            gap: 10px; /* Adjusted gap for better spacing */
-        }
-
-        /* Responsive Styles */
         @media (max-width: 768px) {
             .description h1 {
-                font-size: 1.8rem; /* Slightly smaller heading on tablets */
+                font-size: 2.5rem;
             }
 
             .description p {
-                font-size: 1rem; /* Smaller font-size for tablets */
+                font-size: 1.1rem;
+                padding: 0 15px;
             }
 
-            .project-img {
-                max-width: 400px; /* Adjust image size for tablets */
+            .container {
+                padding: 20px;
             }
         }
 
         @media (max-width: 480px) {
             body {
-                padding: 10px; /* Increased padding for mobile view */
+                padding: 20px 10px;
             }
 
             .description h1 {
-                font-size: 1.5rem; /* Smaller heading for mobile */
+                font-size: 2rem;
             }
 
             .description p {
-                font-size: 0.95rem; /* Adjusted font-size for mobile */
+                font-size: 1rem;
             }
 
             .images {
-                flex-direction: column; /* Stack images vertically on mobile */
-            }
-
-            .project-img {
-                max-width: 100%; /* Images take full width on mobile */
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
         }
     </style>
