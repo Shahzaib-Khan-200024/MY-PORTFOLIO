@@ -397,6 +397,7 @@ nav ul li a:hover::after {
     margin-top: 30px;
     text-align: center;
     transition: transform 0.5s ease;
+    font-size: 1.2rem;
 }
 
 .contact-left a.hover-me {
